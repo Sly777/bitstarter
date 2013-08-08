@@ -1,103 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <link type="text/css" rel="stylesheet" 
-          href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-      }
-      .container {
-        width: 960px;
-      }
-      p.lead {
-        padding-top: 15px;
-      }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
-      }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
-        text-align: center;
-      }
-      .video {
-        /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-        height: 124px;
-        line-height: 124px;
-      }
-      .thermometer, .order, .social {
-        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
-      }
-      div.row {
-        border: 1px solid;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Ilker Guller's Stanford Startup Engineering Final Project.">
+    <meta name="author" content="Ilker Guller">
+    <title>Bitstarter</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css" rel="stylesheet">
+    <style>
+        body {
+            margin-top: 40px;
+        }
+
+        .row-fluid {
+            margin-bottom: 20px;
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row navigation">
-        <div class="span2 logo">
-          Logo
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">One Dollar for Children</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
         </div>
-        <div class="span6 blank">
-          Blank
-        </div>
-        <div class="span4 about">
-          About
-        </div>
-      </div>
-      <div class="row heading">
-        <div class="span12">
-          <h1>Bitstarter Title</h1>
-        </div>
-      </div> 
-     <div class="row subheading">
-        <div class="span12">
-          <p class="lead">This is my first bitstarter project.</p>
-        </div>
-      </div>
-      <div class="row pitch">
-        <div class="span6 video">
-          Video
-        </div>
-        <div class="span6">
-          <div class="thermometer">
-            Thermometer
-          </div>
-          <div class="order">
-            Order
-          </div>
-          <div class="social">
-            Social
-          </div>
-        </div>
-      </div>
-      <div class="row section1">
-        <div class="span12">
-          Marketing Section 1
-        </div>
-      </div>
-      <div class="row section2">
-        <div class="span12">
-          Marketing Section 2
-        </div>
-      </div>
-      <div class="row faq">
-        <div class="span12">
-          FAQ
-        </div>
-      </div>
-      <div class="row footer">
-        <div class="span12">
-          Footer
-        </div>
-      </div>
     </div>
-  </body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>
+            Product Name
+            <small>One Sentence description</small>
+        </h1>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span6">
+            <img src="http://placehold.it/480x300" alt="">
+        </div>
+        <div class="span6 details">
+            <div class="row-fluid">
+                <div class="span12 statistics">
+                    <div class="span4">
+                        <h3>1000</h3> <p>backers</p>
+                    </div>
+                    <div class="span4">
+                        <h3>$6000</h3> <p>of $10,000</p>
+                    </div>
+                    <div class="span4">
+                        <h3>10</h3> <p>days left</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12 progressBar">
+                    <div class="progress">
+                        <div class="bar bar-success" style="width: 65%;"></div>
+                        <div class="bar bar-warning" style="width: 35%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <button class="btn btn-success btn-large">Pre-Order</button>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <button class="btn btn-twitter"><i class="icon-twitter"> | Twitter</i></button>
+                    <button class="btn btn-facebook"><i class="icon-facebook"> | Facebook</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span6">
+            <img src="http://placehold.it/480x300" alt="">
+        </div>
+        <div class="span6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor blandit leo, et tempus magna. In enim ante, tempus ut velit suscipit, dictum pretium nulla. Aenean et feugiat nulla, et aliquet mauris. Morbi malesuada, justo nec condimentum accumsan, nibh massa mollis diam, nec faucibus nunc urna at risus. Fusce viverra iaculis lectus posuere imperdiet. In ut facilisis orci. Etiam dolor lectus, tempus in vulputate id, ullamcorper vel orci. Praesent luctus nisl quis leo varius venenatis.</div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor blandit leo, et tempus magna. In enim ante, tempus ut velit suscipit, dictum pretium nulla. Aenean et feugiat nulla, et aliquet mauris. Morbi malesuada, justo nec condimentum accumsan, nibh massa mollis diam, nec faucibus nunc urna at risus. Fusce viverra iaculis lectus posuere imperdiet. In ut facilisis orci. Etiam dolor lectus, tempus in vulputate id, ullamcorper vel orci. Praesent luctus nisl quis leo varius venenatis.</div>
+        <div class="span6">
+            <img src="http://placehold.it/480x300" alt="">
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="row-fluid">
+            <div class="span12"><h4>FAQ</h4></div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#faqAccordion" href="#faqQuestion1">
+                                1.Question
+                            </a>
+                        </div>
+                        <div id="faqQuestion1" class="accordion-body collapse" style="height: 0px;">
+                            <div class="accordion-inner">
+                                1.Answer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#faqAccordion" href="#faqQuestion2">
+                                2.Question
+                            </a>
+                        </div>
+                        <div id="faqQuestion2" class="accordion-body collapse" style="height: 0px;">
+                            <div class="accordion-inner">
+                                2.Answer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid footer">
+        <div class="span12">
+            All Rights Reserved. This is Ilker Guller's Stanford Startup Engineering Final Project.
+        </div>
+    </div>
+</div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</body>
 </html>
