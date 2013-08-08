@@ -1,1 +1,13 @@
+body {
+    margin-top: 40px;
+}
 
+@media (max-width: 979px) {
+    body {
+        margin-top: 0px;
+    }
+}
+
+.row-fluid {
+    margin-bottom: 20px;
+}
