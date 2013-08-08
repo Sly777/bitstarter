@@ -3,6 +3,7 @@ body {
     background-color: black;
     font-family: 'IM Fell Double Pica', serif;
     color: #BDBDBD;
+    background: url(Assets/Images/twinkle_twinkle.png) repeat top left;
 }
 
 p {
@@ -15,6 +16,18 @@ p {
     font-family: 'New Rocker', cursive;
     text-shadow: 1px 1px 1px #000000;
     font-size: 21px;
+}
+
+.navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:focus {
+    background-color: transparent;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.navbar-inverse .nav .active>a:hover {
+    background-color: black;
+    color: red;
+    border-bottom: 3px solid red;
 }
 
 @media (max-width: 979px) {
@@ -41,6 +54,17 @@ p {
         background: linear-gradient(to bottom, #8b0121 0%,#75011c 44%,#5a0015 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b0121', endColorstr='#5a0015',GradientType=0 );
     }
+
+    .navbar-inverse .nav-collapse .nav>li>a:hover, .navbar-inverse .nav-collapse .nav>li>a:focus, .navbar-inverse .nav-collapse .dropdown-menu a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+        background-color: #111111;
+        color: red;
+    }
+
+    .navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:hover, .navbar-inverse .nav .active>a:focus {
+        background-color: lightgray;
+        color: black;
+        border-bottom: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -64,6 +88,10 @@ p {
 
 .navbar {
     font-family: 'New Rocker', cursive;
+}
+
+.btnCoinBase {
+    font-family: 'New Rocker', cursive !important;
 }
 
 .navbar .navbar-inner {
