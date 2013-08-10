@@ -11,8 +11,208 @@
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href='http://fonts.googleapis.com/css?family=New+Rocker|IM+Fell+Double+Pica' rel='stylesheet' type='text/css'>
-    <link href="System.css" rel="stylesheet">
     <style type="text/css">
+        body {
+            margin-top: 40px;
+            background-color: black;
+            font-family: 'IM Fell Double Pica', serif;
+            color: #BDBDBD;
+            background: url(Assets/Images/twinkle_twinkle.png) repeat top left;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: justify;
+        }
+
+        .btn.btn-success.btn-large {
+            font-family: 'New Rocker', cursive;
+            text-shadow: 1px 1px 1px #000000;
+            font-size: 21px;
+        }
+
+        .navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:focus {
+            background-color: transparent;
+            color: white;
+            border-bottom: 3px solid white;
+        }
+
+        .navbar-inverse .nav .active>a:hover {
+            background-color: black;
+            color: red;
+            border-bottom: 3px solid red;
+        }
+
+        @media (max-width: 979px) {
+            body {
+                margin-top: 0;
+            }
+
+            .btn {
+                margin-bottom: 20px;
+            }
+
+            .row-fluid.action,
+            .row-fluid.shares {
+                margin-bottom: 0;
+            }
+
+            .navbar .btn-navbar {
+                background: #8b0121;
+                background: -moz-linear-gradient(top, #8b0121 0%, #75011c 44%, #5a0015 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8b0121), color-stop(44%,#75011c), color-stop(100%,#5a0015));
+                background: -webkit-linear-gradient(top, #8b0121 0%,#75011c 44%,#5a0015 100%);
+                background: -o-linear-gradient(top, #8b0121 0%,#75011c 44%,#5a0015 100%);
+                background: -ms-linear-gradient(top, #8b0121 0%,#75011c 44%,#5a0015 100%);
+                background: linear-gradient(to bottom, #8b0121 0%,#75011c 44%,#5a0015 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b0121', endColorstr='#5a0015',GradientType=0 );
+            }
+
+            .navbar-inverse .nav-collapse .nav>li>a:hover, .navbar-inverse .nav-collapse .nav>li>a:focus, .navbar-inverse .nav-collapse .dropdown-menu a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+                background-color: #111111;
+                color: red;
+            }
+
+            .navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:hover, .navbar-inverse .nav .active>a:focus {
+                background-color: lightgray;
+                color: black;
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .details .statistics h3 {
+                display: inline-block;
+            }
+
+            .details .statistics p {
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+
+        .row-fluid {
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 small {
+            display: block;
+        }
+
+        .navbar {
+            font-family: 'New Rocker', cursive;
+        }
+
+        .btnCoinBase {
+            font-family: 'New Rocker', cursive !important;
+        }
+
+        .navbar .navbar-inner {
+            background: #a90329;
+            background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+            background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+        }
+
+        .navbar .nav>li>a  {
+            color: white;
+            text-shadow: none;
+        }
+
+        .navbar .brand {
+            color: #FF0000;
+            text-shadow: 0 0 12px #000;
+            font-size: 40px;
+        }
+
+        img.starterimages {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .details {
+            padding: 0px 80px;
+        }
+
+        .details .statistics,
+        .details .statistics p {
+            text-align: center;
+        }
+
+        .details .statistics h3 {
+            color: #FF0000;
+            font-size: 40px;
+        }
+
+        .details .action .span12,
+        .details .shares .span12 {
+            text-align: center;
+        }
+
+        .progress-metalsuccess .bar, .progress .bar-metalsuccess {
+            background-color: #a90329;
+            background-image: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+            background-image: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background-image: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background-image: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background-image: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+        }
+
+        .progress-metalwarning .bar, .progress .bar-metalwarning {
+            background-color: #cedce7;
+            background-image: -moz-linear-gradient(top, #cedce7 0%, #596a72 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedce7), color-stop(100%,#596a72));
+            background-image: -webkit-linear-gradient(top, #cedce7 0%,#596a72 100%);
+            background-image: -o-linear-gradient(top, #cedce7 0%,#596a72 100%);
+            background-image: -ms-linear-gradient(top, #cedce7 0%,#596a72 100%);
+            background-image: linear-gradient(to bottom, #cedce7 0%,#596a72 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 );
+        }
+
+        .faq h4 {
+            font-size: 24px;
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+        }
+
+        .faq .row-fluid:first-child {
+            margin-bottom: 0;
+        }
+
+        .faq .accordion-group {
+            border-radius: 0;
+            background: #efefef;
+            background: -moz-linear-gradient(top, #efefef 0%, #d6d6d6 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#d6d6d6));
+            background: -webkit-linear-gradient(top, #efefef 0%,#d6d6d6 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#d6d6d6 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#d6d6d6 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#d6d6d6 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#d6d6d6',GradientType=0 );
+            margin-bottom: 1px;
+            color: #000000;
+        }
+
+        .faq .accordion-group a {
+            color: darkred;
+        }
+
+        .footer {
+            font-size: 10px;
+            text-align: center;
+            color: #838383;
+            border-top: 1px solid #6d0019;
+            padding-top: 10px;
+        }
+
         div.addthis_toolbox {
             width: 250px;
             margin: 0 auto;
@@ -61,7 +261,7 @@
 
     <div class="row-fluid">
         <div class="span6">
-            <img class="starterimages" src="Assets/Images/pic2.jpg" alt="Our Poor Band Photo (with Instagram Effect)" title="Our Poor Band Photo (with Instagram Effect)">
+            <img class="starterimages" src="http://i62.photobucket.com/albums/h91/bloody_drummer/pic2.jpg" alt="Our Poor Band Photo (with Instagram Effect)" title="Our Poor Band Photo (with Instagram Effect)">
         </div>
         <div class="span6 details">
             <div class="row-fluid">
@@ -117,7 +317,7 @@
     <!-- http://placehold.it -->
     <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-            <img class="starterimages" src="Assets/Images/pic1.jpg" alt="We have a dream!" title="We have a dream!">
+            <img class="starterimages" src="http://i62.photobucket.com/albums/h91/bloody_drummer/pic1.jpg" alt="We have a dream!" title="We have a dream!">
         </div>
         <div class="span5 copy">
             <p>Hi, Thank you so much for visiting our Bitstarter page. We has been working hard on our first album for 2 years. But now WE NEED YOUR HELP.</p>
@@ -133,7 +333,7 @@
             </p>
         </div>
         <div class="span5 asset">
-            <img class="starterimages" src="Assets/Images/pic1.jpg" alt="We have a dream!" title="We have a dream!">
+            <img class="starterimages" src="http://i62.photobucket.com/albums/h91/bloody_drummer/pic1.jpg" alt="We have a dream!" title="We have a dream!">
         </div>
     </div>
 
